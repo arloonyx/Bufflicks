@@ -29,7 +29,8 @@ export default function MovieDetail() {
   };
 
   return (
-    <div className="text-white animate-fade-in flex flex-col gap-6 relative font-['Outfit']">
+    // Just update this single top-level line in the component:
+<div className="text-white animate-fade-in flex flex-col gap-6 relative font-['Outfit'] w-full max-w-[1600px] mx-auto">
       
       {/* Back Navigation */}
       <button 
@@ -109,9 +110,10 @@ export default function MovieDetail() {
       </div>
 
       {/* Slide-Out Chat Drawer */}
+      {/* Slide-Out Chat Drawer */}
       <div 
-        className={`fixed top-0 right-0 h-screen w-full sm:w-[400px] bg-[#0e0e12] border-l border-white/5 z-50 flex flex-col shadow-2xl transform transition-transform duration-300 ease-in-out ${
-          isChatOpen ? 'translate-x-0' : 'translate-x-full'
+        className={`fixed top-0 right-0 h-screen w-full sm:w-[400px] bg-[#0e0e12] border-l border-white/5 z-50 flex flex-col shadow-2xl transform transition-all duration-300 ease-in-out ${
+          isChatOpen ? 'translate-x-0 opacity-100' : 'translate-x-[120%] opacity-0 pointer-events-none'
         }`}
       >
         {/* Chat Header */}

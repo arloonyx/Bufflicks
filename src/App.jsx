@@ -29,13 +29,16 @@ function Home() {
             background: 'linear-gradient(90deg, #ff1a00 0%, #ff858d 45%, #00c3ff 100%)'
           }}
         >
-          <p className="text-[11px] font-bold tracking-widest text-white/90 uppercase text-center leading-relaxed">
+          {/* Made "Built by Fans" text smaller */}
+          <p className="text-[9px] font-bold tracking-widest text-white/70 uppercase text-center leading-relaxed">
             Built by Fans.<br />Built for Fans.
           </p>
           
           <div className="text-center select-none flex flex-col items-center mt-4">
-            <h1 className="text-[5.5rem] md:text-[7.5rem] lg:text-[9rem] font-black tracking-tighter text-black leading-[0.8] uppercase">
-              A BRAND<span className="text-[#ff003c]">.</span>
+            {/* Shrunk the "A" relative to "BRAND" */}
+            <h1 className="text-[5.5rem] md:text-[7.5rem] lg:text-[9rem] font-black tracking-tighter text-black leading-[0.8] uppercase flex items-baseline">
+              <span className="text-[4rem] md:text-[5.5rem] lg:text-[6.5rem] mr-2">A</span> 
+              <span>BRAND<span className="text-[#ff003c]">.</span></span>
             </h1>
             <h1 className="text-[5.5rem] md:text-[7.5rem] lg:text-[9rem] font-black tracking-tighter text-black leading-[0.8] uppercase mt-1">
               NEW WORLD

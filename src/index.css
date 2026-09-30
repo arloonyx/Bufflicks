@@ -1,24 +1,38 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;900&display=swap');
 @import "tailwindcss";
 
-/* Global Font Override */
-body {
-  font-family: 'Outfit', sans-serif;
+/* Bulletproof Mobile & Desktop Container */
+html, body, #root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Strictly prevents horizontal scroll on iOS/Android */
   background-color: #0e0e12;
+  font-family: 'Outfit', sans-serif;
 }
 
-/* Custom Animation classes for standard CSS */
 .animate-fade-in {
   animation: fadeIn 0.4s ease-in-out forwards;
 }
 
 @keyframes fadeIn {
-  from { 
-    opacity: 0; 
-    transform: translateY(10px); 
-  }
-  to { 
-    opacity: 1; 
-    transform: translateY(0); 
-  }
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Force Custom Cinematic Scrollbar universally */
+*::-webkit-scrollbar {
+  width: 8px !important;
+  height: 8px !important;
+}
+*::-webkit-scrollbar-track {
+  background: #0e0e12 !important; 
+}
+*::-webkit-scrollbar-thumb {
+  background: #17171e !important; 
+  border-radius: 4px !important;
+}
+*::-webkit-scrollbar-thumb:hover {
+  background: #2a2a35 !important; 
 }
